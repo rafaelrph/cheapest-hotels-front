@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { ApiService } from '../services/api.service';
 import { HotelService } from '../services/hotel.service';
 import { HttpModule } from '@angular/http';
-import { HotelCardComponent } from './components/hotelcard.component';
+import { HotelCardComponent } from '../components/hotelcard.component';
 
 
 @NgModule({

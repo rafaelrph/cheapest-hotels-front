@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { HotelService } from '../services/hotel.service';
+import { Hotel } from '../models/hotel';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,7 @@ export class AppComponent {
   /**
    * List of hotels
    */
-  hotelsFound: any[] = null;
+  hotelsFound: Hotel[] = null;
 
   /**
    * Form instance
@@ -54,8 +55,9 @@ export class AppComponent {
    * Read the form and request the API
    */
   searchHotels() {
-    this.hotelService.searchCheapestHotels(this._get('checkin'), this._get('checkout'), this._get('location')).subscribe(hotels => {
-      this.hotelsFound = hotels;
+    this.hotelService.searchCheapestHotels(this._get('checkin'), this._get('checkout'), this._get('location'))
+      .subscribe(hotels => {
+        this.hotelsFound = hotels;
     });
     
   }

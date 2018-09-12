@@ -1,5 +1,6 @@
 
 import { Component, Input, EventEmitter, Output } from '@angular/core';
+import { Hotel } from '../models/hotel';
 
 @Component({
   selector: 'hotel-card',
@@ -8,10 +9,7 @@ import { Component, Input, EventEmitter, Output } from '@angular/core';
 })
 export class HotelCardComponent {
 
-    @Input() name;
-    @Input() price;
-    @Input() address;
-    @Input() contacts;
+    @Input() hotel: Hotel;
 
     @Output() selecionar = new EventEmitter<HotelCardComponent>();
 

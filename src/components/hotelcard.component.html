@@ -1,0 +1,17 @@
+<div class="hotel-card">
+
+    <div class="hotel-name">
+        <strong>{{hotel.property_name}}</strong>
+    </div>
+
+    <h3 class="hotel-price">{{hotel.total_price.currency}}$ {{hotel.total_price.amount}}</h3>
+    
+    <p class="hotel-address">
+        {{hotel.address.line1}}, {{hotel.address.city}}, {{hotel.address.region}}
+        <span class="hotel-postalcode">{{hotel.address.postal_code}}</span>
+    </p>
+    
+    <p class="hotel-contact">
+        {{hotel.contacts[0].detail}}
+    </p>
+</div>

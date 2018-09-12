@@ -4,7 +4,7 @@
   <!-- MAIN CONTAINER -->
   <div class="col-md-6 col-xs-12 col-sm-10 main-container">
 
-    <h3 class="header-title">Find the Cheapest Hotels</h3><hr />
+    <h3 class="header-title">Searching the Cheapest Hotels</h3><hr />
 
     <!-- FORM CONTAINER -->
     <div class="row form-container">
@@ -30,7 +30,7 @@
             
             <div class="button-bar">
                 <button type="submit" class="btn btn-primary btn-block" (click)="searchHotels()">
-                    Find Cheapest Hotels
+                    Search the Cheapest Hotels
                 </button>
             </div>
 
@@ -47,7 +47,6 @@
 
 <div *ngIf="hotelsFound" class="hotel-list">
     <div *ngFor="let hotel of hotelsFound">
-        <hotel-card [name]="hotel['property_name']" [contacts]="hotel['contacts']" [price]="hotel['total_price']" [address]="hotel['address']">
-        </hotel-card>  
+        <hotel-card [hotel]="hotel"></hotel-card>  
     </div>
 </div>
