@@ -7,7 +7,7 @@ This is an Angular project that consumes the API cheapest-hotels (https://github
 * NodeJS
 * Angular
 
-# Lauching
+# Launching
 
 1. Clone this repository
 2. Clone the API repository (https://github.com/rafaelrph/cheapest-hotels)
