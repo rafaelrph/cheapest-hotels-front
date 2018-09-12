@@ -1,0 +1,60 @@
+/* CSS - TABLET AND MOBILE PHONE */
+@media (max-width: 979px) {
+    
+    .hotel-card {
+        display: block;
+    }
+
+}
+
+/* CSS - TABLET */
+@media (min-width: 481px) and (max-width: 979px) {
+    .hotel-card {
+        width: 60%;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center;
+    }   
+}
+
+/* CSS - DESKTOP */
+@media (min-width: 978px) {
+
+    .hotel-card {
+        min-height: 17em;
+        flex-grow: 1;
+        box-sizing: border-box;
+    }
+
+}
+
+.hotel-card {
+    margin: 1em;
+    border: 0.075em solid #f0f0f0;
+    border-radius: 0.025em;
+    text-align: center;
+}
+
+.hotel-name {
+    padding: 1em;
+    background: #f0f0f0;
+}
+
+.hotel-price {
+    padding: 1em;
+}
+
+.hotel-address {
+    color: gray;
+    font-size: 0.85em;
+    padding: 0 1em;
+}
+
+.hotel-contact {
+    font-size: 1.1em;
+    padding: 0 1em;
+}
+
+.hotel-postalcode {
+    display: block;
+}

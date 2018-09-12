@@ -1,0 +1,85 @@
+/* CSS - MOBILE PHONE */
+@media (max-width: 480px) { 
+
+    .form-container form .form-fields {
+        display: block;
+    }
+    
+}
+
+/* CSS - TABLET AND MOBILE PHONE */
+@media (max-width: 979px) {
+    
+    .main-row {
+        margin: 1em 0;
+    }
+
+}
+
+/* CSS - TABLET */
+@media (min-width: 481px) and (max-width: 979px) {
+    
+}
+
+/* CSS - DESKTOP */
+@media (min-width: 978px) {
+
+    .main-row {
+        margin: 3em 1em;
+        padding: 1em;
+    }
+
+    .form-container form .form-fields {
+        display: flex;
+    }
+
+    .form-container form .form-fields .form-group {
+        flex-grow: 1;
+        padding-right: 0.5em;
+    }
+
+    .form-container form .form-fields .form-group:last-child {
+        padding-right: 0;
+    }
+
+    .form-container form .button-bar {
+        display: block;
+    }
+
+    .hotel-list {
+        display: flex;
+        width: 960px;
+        margin: 0 auto;
+    }
+
+    .hotel-list .hotel-card {
+        flex-basis: 1;
+    }
+}
+
+.main-container {
+    background: #f7f7f7;
+    border: 0.06em solid #d8d8d8;
+    border-radius: 0.25em;
+}
+
+.header-title {
+    text-align: center;
+    padding: 1em;
+}
+
+.form-container {
+    padding: 1em;
+}
+
+form {
+    width: 100%;
+}
+
+hr {
+    margin-top: 0;
+}
+
+.form-container form .button-bar {
+    margin: 1em 0;
+}

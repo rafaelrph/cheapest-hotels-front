@@ -1,0 +1,53 @@
+<!-- MAIN ROW -->
+<div class="row justify-content-center main-row">
+
+  <!-- MAIN CONTAINER -->
+  <div class="col-md-6 col-xs-12 col-sm-10 main-container">
+
+    <h3 class="header-title">Find the Cheapest Hotels</h3><hr />
+
+    <!-- FORM CONTAINER -->
+    <div class="row form-container">
+
+        <form [formGroup]='searchForm'>
+
+            <!-- FORM FIELDS -->
+            <div class="form-fields">
+                <div class="form-group">
+                    <label for="checkinInput">Check-in</label>
+                    <input type="date" class="form-control" id="checkinInput" placeholder="Check-in" formControlName='checkin' ngDefaultControl>
+                </div>
+                <div class="form-group">
+                    <label for="checkoutInput">Check-out</label>
+                    <input type="date" class="form-control" id="checkoutInput" placeholder="Check-out" formControlName='checkout' ngDefaultControl>
+                </div>
+                <div class="form-group">
+                    <label for="locationInput">Airport</label>
+                    <input type="text" class="form-control" id="locationInput" maxlength="3" placeholder="Airport Code (YYZ)" formControlName='location' ngDefaultControl>
+                </div>
+            </div>
+            <!-- END OF FORM FIELDS -->
+            
+            <div class="button-bar">
+                <button type="submit" class="btn btn-primary btn-block" (click)="searchHotels()">
+                    Find Cheapest Hotels
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+    <!-- END OF FORM CONTAINER -->
+
+  </div>
+  <!-- END OF MAIN CONTAINER -->
+
+</div>
+<!-- END OF MAIN ROW -->
+
+<div *ngIf="hotelsFound" class="hotel-list">
+    <div *ngFor="let hotel of hotelsFound">
+        <hotel-card [name]="hotel['property_name']" [contacts]="hotel['contacts']" [price]="hotel['total_price']" [address]="hotel['address']">
+        </hotel-card>  
+    </div>
+</div>
