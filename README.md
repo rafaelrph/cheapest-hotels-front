@@ -17,6 +17,10 @@ This is an Angular project that consumes the API cheapest-hotels (https://github
 
 Project will be launched: http://localhost:4200
 
+# Heroku Deployment
+
+https://aw-cheapest-hotels-front.herokuapp.com/
+
 # External API
 
 Consumes: http://localhost:8080/api/hotels/
