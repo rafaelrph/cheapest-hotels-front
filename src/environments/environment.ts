@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  urlApi: 'http://localhost:8080/api/'
+  urlApi: 'https://aw-cheapest-hotels-api.herokuapp.com/api/'
 };

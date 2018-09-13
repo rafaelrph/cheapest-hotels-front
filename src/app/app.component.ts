@@ -14,6 +14,16 @@ export class AppComponent {
   title = 'app';
 
   /**
+   * Error message
+   */
+  errorMsg: string = null;
+
+  /**
+   * Controls errors
+   */
+  error: boolean = false;
+
+  /**
    * List of hotels
    */
   hotelsFound: Hotel[] = null;
@@ -55,11 +65,24 @@ export class AppComponent {
    * Read the form and request the API
    */
   searchHotels() {
-    this.hotelService.searchCheapestHotels(this._get('checkin'), this._get('checkout'), this._get('location'))
-      .subscribe(hotels => {
-        this.hotelsFound = hotels;
-    });
-    
+    if(this._get('checkin') !== "" && this._get('checkout') !== "" && this._get('location') !== "") {
+      this.hotelService.searchCheapestHotels(this._get('checkin'), this._get('checkout'), this._get('location'))
+        .subscribe(hotels => {
+          this.hotelsFound = hotels;
+          this.error = false;
+        },
+        error => {
+            if (error.status == 404) {
+                this.errorMsg = "Not found.";
+            } else {
+                this.errorMsg = "Error on the API.";
+            }
+            this.error = true;
+        });
+    } else {
+        this.errorMsg = "All fields are required.";
+        this.error = true;
+    }
   }
 
 }

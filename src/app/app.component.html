@@ -4,6 +4,10 @@
   <!-- MAIN CONTAINER -->
   <div class="col-md-6 col-xs-12 col-sm-10 main-container">
 
+    <div *ngIf="error" class="alert alert-danger" role="alert">
+        {{errorMsg}}
+    </div>
+
     <h3 class="header-title">Searching the Cheapest Hotels</h3><hr />
 
     <!-- FORM CONTAINER -->
@@ -15,15 +19,15 @@
             <div class="form-fields">
                 <div class="form-group">
                     <label for="checkinInput">Check-in</label>
-                    <input type="date" class="form-control" id="checkinInput" placeholder="Check-in" formControlName='checkin' ngDefaultControl>
+                    <input type="date" class="form-control" required id="checkinInput" placeholder="Check-in" formControlName='checkin' ngDefaultControl>
                 </div>
                 <div class="form-group">
                     <label for="checkoutInput">Check-out</label>
-                    <input type="date" class="form-control" id="checkoutInput" placeholder="Check-out" formControlName='checkout' ngDefaultControl>
+                    <input type="date" class="form-control" required id="checkoutInput" placeholder="Check-out" formControlName='checkout' ngDefaultControl>
                 </div>
                 <div class="form-group">
                     <label for="locationInput">Airport</label>
-                    <input type="text" class="form-control" id="locationInput" maxlength="3" placeholder="Airport Code (YYZ)" formControlName='location' ngDefaultControl>
+                    <input type="text" class="form-control" required id="locationInput" maxlength="3" placeholder="Airport Code (YYZ)" formControlName='location' ngDefaultControl>
                 </div>
             </div>
             <!-- END OF FORM FIELDS -->

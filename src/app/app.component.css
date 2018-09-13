@@ -83,3 +83,7 @@ hr {
 .form-container form .button-bar {
     margin: 1em 0;
 }
+
+.main-container .alert {
+    margin-top: 1em;
+}
