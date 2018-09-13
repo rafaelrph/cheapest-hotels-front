@@ -77,6 +77,7 @@ export class AppComponent {
             } else {
                 this.errorMsg = "Error on the API.";
             }
+            this.hotelsFound = null;
             this.error = true;
         });
     } else {
